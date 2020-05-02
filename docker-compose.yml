@@ -1,0 +1,58 @@
+version: "3"
+services:
+
+  
+  
+  db:
+    
+    
+    image: mysql:5.7
+    
+    
+    restart: always
+   
+    volumes:
+      - db_data:/var/lib/mysql
+   
+    environment:
+      MYSQL_ROOT_PASSWORD: redhat
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: redhat
+    
+    networks:
+      - wp
+
+  
+  wordpress:
+    
+    depends_on:
+      - db
+    
+    image: wordpress
+    
+    restart: always
+    
+    volumes: ["./:/var/www/html/wp-content"]
+    
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: redhat
+  
+    ports:
+      - 80:80
+      - 443:443
+    
+    networks:
+      - wp
+
+  
+  
+
+networks:
+  wp:
+
+
+volumes:
+  db_data:
