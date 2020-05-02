@@ -10,8 +10,9 @@ This project is a part of my docker training which I have done under the guidanc
 all the usecases of docker technology. Thanks to Vimal sir for his guidance and fabulous teaching.
 
 
-
 ![menu](https://user-images.githubusercontent.com/64701398/80872167-e7997680-8ccd-11ea-974b-cd013e5222c3.png)
 
+![wordpress](https://user-images.githubusercontent.com/64701398/80872292-9b9b0180-8cce-11ea-93c7-da1b7b2d794b.png)
 
-![wordpress](https://user-images.githubusercontent.com/64701398/80872228-4828b380-8cce-11ea-8204-49dca1ed9af1.png)
+
+
